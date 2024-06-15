@@ -8,12 +8,12 @@
 
 header {
     display: flex;
-    width: 100%;
     position: sticky;
-    z-index: 1;
-    background-image: url('assets/bgposter.png');
+    top: 0;
+    /* background-image: url('assets/bgposter.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: #181f30;
     box-shadow: 1px 1px 20px cyan;
 }
 
@@ -63,6 +63,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 5rem;
+    flex: 1;
 }
 
 #about {
@@ -71,19 +72,26 @@ header {
     justify-content: center;
     /* margin-top: 10%;
     margin-right: 5%; */
-    text-align: center;
+    text-align: left;
     background-color: green;
-    width: 50%;
-    height: 50%;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
+    gap: 1.5rem;
     padding: 2rem;
-    gap: 3rem;
+    width: 650px;
+    height: 25rem;
 }
 
 .about-me img {
     /* margin-left: 5%;
     margin-top: 10%; */
-    width: 25%;
-    border-radius: 50px;
-    
+    border-radius: 50%;
+    width: 30rem;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 5vh;
+    align-items: center;
+    text-align: center;
 }
