@@ -1,9 +1,21 @@
+:root {
+    --primary-color: #222831;
+    --secondary-color: #393E46;
+    --accent-color: #32E0C4;
+    --text-color: #EEEEEE;
+}
+
 * {
-    outline: auto;
+    /* outline: auto; */
     box-sizing: border-box;
     margin: 0; padding: 0;
     text-transform: capitalize;
     text-decoration: none;
+    color: var(--text-color)
+}
+
+body {
+    background-color: var(--primary-color);
 }
 
 section {
@@ -17,8 +29,8 @@ header {
     display: flex;
     position: sticky;
     top: 0;
-    background-color: #181f30;
-    box-shadow: 1px 1px 20px cyan;
+    background-color: var(--primary-color);
+    box-shadow: 1px 1px 20px var(--accent-color);
 }
 
 .navbar {
@@ -31,14 +43,14 @@ header {
 
 .navbar nav > a{
     padding: 0.5rem;
-    color: white;
+    color: var(--text-color);
     font-size: 1.5rem;
     font-weight: bolder;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .navbar nav > a:hover{
-    color: cyan;
+    color: var(--accent-color);
 }
 
 .logo>img {
@@ -47,7 +59,7 @@ header {
 }
 
 .logo>img:hover {
-    box-shadow: 1px 1px 30px cyan;
+    box-shadow: 1px 1px 30px var(--accent-color);
 }
 
 /* About me Section */
@@ -58,7 +70,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    background-color: cyan;
+    background-color: var(--secondary-color);
     padding-top: 0;
 }
 
@@ -67,7 +79,7 @@ header {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    background-color: green;
+    background-color: var(--secondary-color);
     line-height: 1.5rem;
     gap: 1.5rem;
     padding: 2rem;
@@ -83,6 +95,7 @@ header {
 #about-content {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    background-color: var(--primary-color);
 }
 
 .slider-nav {
@@ -95,9 +108,8 @@ header {
 
 .slider-nav a {
     font-size: 1.5rem;
-    color: white; 
-    background-color: #181f30;
-    border: 0.2rem outset cyan;
+    background-color: var(--primary-color);
+    border: 3px solid cyan;
 }
 
 .slider {
@@ -114,27 +126,18 @@ header {
     align-content: center;
 }
 
-#about-background {
-    background-color: red;
-}
-
-#about-skills {
-    background-color: blue;
-}
-
-#contact {
-    background-color: green;
+.slider .card {
+    background-color: var(--secondary-color);
 }
 
 /* Projects Section */
 
 #projects {
     display: flex;
-    background-color: blue;
+    background-color: var(--primary-color);
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    
 }
 
 .projects-container {
@@ -147,7 +150,8 @@ header {
 
 .project-info {
     display: flex;
-    background-color: green;
+    background-color: var(--text-color);
+    color: var(--primary-color);
     width: 100%;
     height: 15rem;
     justify-content: center;
