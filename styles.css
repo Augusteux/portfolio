@@ -1,9 +1,13 @@
 * {
-    /* outline: auto; */
+    outline: auto;
     box-sizing: border-box;
     margin: 0; padding: 0;
     text-transform: capitalize;
     text-decoration: none;
+}
+
+section {
+    min-height: 100vh;
 }
 
 /* Navigation bar */
@@ -14,7 +18,6 @@ header {
     top: 0;
     background-color: #181f30;
     box-shadow: 1px 1px 20px cyan;
-    min-height: 10vh;
 }
 
 .navbar {
@@ -50,15 +53,15 @@ header {
     box-shadow: 1px 1px 30px cyan;
 }
 
-/* about me section */
+/* About me Section */
 
 #about-hero {
     display: flex;
     flex-wrap: wrap;
-    min-height: 90vh;
     justify-content: center;
     align-items: center;
     gap: 5rem;
+    background-color: cyan;
 }
 
 .hero-text {
@@ -80,24 +83,25 @@ header {
 }
 
 #about-content {
-    padding: 2rem;
+    align-content: center;
 }
 
-.slider-wrapper {
-    margin: 0.3rem auto 0;
+.content-wrapper {
+    padding: 3.5rem;
+    height: 40rem;
 }
 
 .slider {
     display: flex;
-    width: 100%;
-    min-height: 80vh;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
+    scroll-snap-type: x mandatory;
+    height: 100%;
 }
 
 .card {
     flex: 1 0 100%;
-    scroll-snap-align: start;
+    z-index: 1;
 }
 
 .slider-nav {
@@ -124,5 +128,24 @@ header {
 }
 
 #about-hobbies {
+    background-color: green;
+}
+
+/* Projects Section */
+
+#projects {
+    display: grid;
+    min-height: 100vh;
+    width: 100%;
+    background-color: blue;
+}
+
+
+/* Footer Section */
+
+#call-to-action {
+    display: grid;
+    min-height: 100vh;
+    width: 100%;
     background-color: green;
 }
