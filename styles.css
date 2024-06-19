@@ -47,6 +47,7 @@ header {
     font-size: 1.5rem;
     font-weight: bolder;
     font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
 }
 
 .navbar nav > a:hover{
@@ -80,16 +81,18 @@ header {
     justify-content: center;
     text-align: left;
     background-color: var(--secondary-color);
-    line-height: 1.5rem;
+    line-height: 2rem;
     gap: 1.5rem;
     padding: 2rem;
-    width: 650px;
-    height: 25rem;
+    width: 40rem;
+    height: 15rem;
+    font-size: 1.5rem;
 }
 
 #about-hero img {
     border-radius: 50%;
     width: 30rem;
+    border: 5px inset;
 }
 
 #about-content {
@@ -103,27 +106,40 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     height: 2rem;
     text-align: center;
+    align-items: center;
     gap: 0.5rem;
 }
 
 .slider-nav a {
     font-size: 1.5rem;
     background-color: var(--primary-color);
-    border: 3px solid cyan;
+    border: 3px inset var(--accent-color);
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+.slider-nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color)
 }
 
 .slider {
+    margin-top: 6px;
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth; 
     scroll-snap-type: x mandatory;
-    min-height: 38.5rem;
+    min-height: 38rem;
+    border-radius: 25px;
 }
 
 .card {
     flex: 1 0 100%;
     text-align: center;
     align-content: center;
+    padding: 3rem;
 }
 
 .slider .card {
@@ -156,4 +172,5 @@ header {
     height: 15rem;
     justify-content: center;
     align-items: center;
+    border: 3px solid var(--accent-color);  
 }
