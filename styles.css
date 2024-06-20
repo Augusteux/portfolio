@@ -117,7 +117,7 @@ header {
     overflow-x: hidden;
     scroll-behavior: smooth; 
     scroll-snap-type: x mandatory;
-    min-height: 42rem;
+    min-height: 40rem;
     border-radius: 25px;
 }
 
