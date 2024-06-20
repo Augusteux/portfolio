@@ -19,7 +19,7 @@ body {
 }
 
 section {
-    min-height: 100vh;
+    min-height: 100svh;
     padding-top: 5rem;
 }
 
@@ -31,6 +31,7 @@ header {
     top: 0;
     background-color: var(--primary-color);
     box-shadow: 1px 1px 20px var(--accent-color);
+    z-index: 2;
 }
 
 .navbar {
@@ -72,7 +73,7 @@ header {
     align-items: center;
     gap: 5rem;
     background-color: var(--secondary-color);
-    padding-top: 0;
+    padding-top: 1rem;
 }
 
 .hero-text {
@@ -101,49 +102,61 @@ header {
     background-color: var(--primary-color);
 }
 
-.slider-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 2rem;
+.slider .slide {
+    background-color: var(--secondary-color);
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth; 
+    scroll-snap-type: x mandatory;
+    min-height: 42rem;
+    border-radius: 25px;
+}
+
+.slide {
+    flex: 1 0 100%;
+    
     text-align: center;
-    align-items: center;
-    gap: 0.5rem;
+    align-content: center;
+    padding: 3rem;
+}
+
+.slider-nav {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    
+    text-align: center;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 .slider-nav a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     background-color: var(--primary-color);
     border: 3px inset var(--accent-color);
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     border-radius: 25px;
+    height: 50px;
+    width: 200px;
+    align-content: center;
 }
 
 .slider-nav a:hover {
     background-color: var(--secondary-color);
     color: var(--accent-color)
-}
-
-.slider {
-    margin-top: 6px;
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth; 
-    scroll-snap-type: x mandatory;
-    min-height: 38rem;
-    border-radius: 25px;
-}
-
-.card {
-    flex: 1 0 100%;
-    text-align: center;
-    align-content: center;
-    padding: 3rem;
-}
-
-.slider .card {
-    background-color: var(--secondary-color);
 }
 
 /* Projects Section */
@@ -157,10 +170,10 @@ header {
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
-    width: 100%;
     padding: 2rem;
 }
 
@@ -168,9 +181,94 @@ header {
     display: flex;
     background-color: var(--text-color);
     color: var(--primary-color);
-    width: 100%;
+    border: 3px solid var(--accent-color);
+    width: 300px;
     height: 15rem;
     justify-content: center;
     align-items: center;
-    border: 3px solid var(--accent-color);  
+}
+
+
+/* breakpoints
+-#about-hero img size
+-slider-nav a size
+-slider position
+-slider size
+-navbar a, img
+*/
+
+@media only screen and (max-width: 880px) {
+    .slider {
+        min-height: 37rem;
+    }
+    .slider-nav a {
+        height: 30px;
+        width: 150px;
+    }
+
+}
+
+@media only screen and (max-width: 638px) {
+    #about-hero img {
+        width: 20rem;
+        border: 3px inset;
+    }
+    #about-hero {
+        gap: 0px;
+    }
+    .slider-nav a {
+        width: 130px;
+        font-size: 0.8rem;
+    }
+    .slider {
+        min-height: 34rem;
+    }
+}
+
+@media only screen and (max-width: 551px) {
+    .slider-nav a {
+        width: 110px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .slider {
+        height: 47rem;
+    }
+}
+
+@media only screen and (max-width: 469px) {
+    .slider-nav a {
+        width: 90px;
+        font-size: 0.6rem;
+    }
+    .navbar nav > a {
+        font-size: 1.2rem;
+    }
+    .slider {
+        height: 47rem;
+    }
+} 
+
+@media only screen and (max-width: 407px) {
+    .slider-nav a {
+        width: 80px;
+        font-size: 0.6rem;
+    }
+
+    .navbar nav > a {
+        font-size: 1.2rem;
+    }
+} 
+
+@media only screen and (max-width: 375px) {
+    .slider {
+        height: 36rem;
+    }
+    .navbar nav > a {
+        font-size: 1rem;
+    }
+    .logo img {
+        width: 4rem;
+    }
 }
