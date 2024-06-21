@@ -34,26 +34,49 @@ header {
     z-index: 2;
 }
 
+.logo {
+    margin-left: 2rem;
+}
+
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 1rem;
     width: 100%;
+    margin-right: 2rem;
 }
 
-.navbar nav > a{
+.navbar nav > a, .slider-nav a {
     padding: 0.5rem;
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bolder;
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
 }
 
-.navbar nav > a:hover{
+.navbar nav > a:hover, .slider-nav a:hover {
     color: var(--accent-color);
 }
+
+/* .slider-nav a {
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    border: 3px inset var(--accent-color);
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
+    height: 50px;
+    width: 200px;
+    align-content: center;
+} */
+
+/* .slider-nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color)
+} */
 
 .logo>img {
     border-radius: 50%;
@@ -100,63 +123,21 @@ header {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     background-color: var(--primary-color);
-}
-
-.slider .slide {
-    background-color: var(--secondary-color);
-}
-
-.slider-wrapper {
-    position: relative;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.slider {
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth; 
     scroll-snap-type: x mandatory;
     min-height: 40rem;
     border-radius: 25px;
+ 
 }
 
 .slide {
     flex: 1 0 100%;
-    
     text-align: center;
     align-content: center;
     padding: 3rem;
-}
-
-.slider-nav {
-    position: absolute;
-    display: flex;
-    gap: 1rem;
-    
-    text-align: center;
-    bottom: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.slider-nav a {
-    font-size: 1rem;
-    background-color: var(--primary-color);
-    border: 3px inset var(--accent-color);
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    border-radius: 25px;
-    height: 50px;
-    width: 200px;
-    align-content: center;
-}
-
-.slider-nav a:hover {
     background-color: var(--secondary-color);
-    color: var(--accent-color)
 }
 
 /* Projects Section */
@@ -164,17 +145,19 @@ header {
 #projects {
     display: flex;
     background-color: var(--primary-color);
-    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
 }
 
 .projects-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+    max-width: 100%;
+    justify-content: space-around;
+    gap: 1rem;
     padding: 2rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
 
 .project-info {
@@ -182,12 +165,12 @@ header {
     background-color: var(--text-color);
     color: var(--primary-color);
     border: 3px solid var(--accent-color);
-    width: 300px;
+    width: 20rem;
     height: 15rem;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
-
 
 /* breakpoints
 -#about-hero img size
@@ -197,7 +180,7 @@ header {
 -navbar a, img
 */
 
-@media only screen and (max-width: 880px) {
+/* @media only screen and (max-width: 880px) {
     .slider {
         min-height: 37rem;
     }
@@ -271,4 +254,6 @@ header {
     .logo img {
         width: 4rem;
     }
-}
+} */
+
+
