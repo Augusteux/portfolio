@@ -6,7 +6,7 @@
 }
 
 * {
-    /* outline: auto; */
+    outline: auto;
     box-sizing: border-box;
     margin: 0; padding: 0;
     text-transform: capitalize;
@@ -60,7 +60,7 @@ header {
     text-transform: uppercase;
 }
 
-.navbar nav > a:hover, .about-nav > a:hover {
+.navbar nav > a:hover {
     color: var(--accent-color);
 }
 
@@ -126,7 +126,8 @@ header {
     z-index: 1;
 
     background-color: var(--secondary-color);
-    border-bottom: 0.1rem inset var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 5px 5px 0 0;
 }
 
 .about-nav a {
@@ -142,24 +143,26 @@ header {
 
     flex-shrink: 1;
     flex-basis: 100%;
-    padding-top: 0.5rem;
-    border: 0.1rem outset var(--primary-color);
+    padding: 0.5rem;
+    border: 1px outset var(--primary-color);
+}
+
+.about-nav a:hover{
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .about-nav a:active{
-    background-color: var(--accent-color);
-    color: var(--primary-color)
+    transform: translateY(1px);
 }
-
 .slide-wrapper {
     display: flex;
-    /* aspect-ratio: 16 / 9; */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
     min-height: 35rem;
-    
+    border-radius: 0 0 5px 5px;
 }
 
 .slide {
@@ -188,6 +191,7 @@ header {
     background-color: transparent;
     max-width: 90%;
     text-align: center;
+    line-height: 5rem;
 }
 
 .projects-container {
@@ -203,15 +207,37 @@ header {
 
 .project-info {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: var(--text-color);
-    color: var(--primary-color);
-    border: 3px solid var(--accent-color);
+    border: 1px solid var(--accent-color);
+
     width: 20rem;
     height: 15rem;
-    justify-content: center;
-    align-items: center;
+
     flex-shrink: 0;
     scroll-snap-align: center;
+}
+
+.proj-content {
+    line-height: 0;
+}
+
+.proj-content img {
+    width: 100%;
+}
+
+.project-info:hover {
+    transform: scale(1.1);
+}
+
+.proj-content h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-shadow: 1px 1px 30px var(--text-color), -1px -1px 30px var(--text-color), -1px 1px 30px var(--text-color), 1px -1px 30px var(--text-color);
+
+    text-align: center;
+    line-height: 2rem;
 }
 
 /* scroll bar customization */
