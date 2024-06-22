@@ -14,6 +14,10 @@
     color: var(--text-color)
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--primary-color);
 }
@@ -60,24 +64,6 @@ header {
     color: var(--accent-color);
 }
 
-/* .slider-nav a {
-    font-size: 1rem;
-    background-color: var(--primary-color);
-    border: 3px inset var(--accent-color);
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    border-radius: 25px;
-    height: 50px;
-    width: 200px;
-    align-content: center;
-} */
-
-/* .slider-nav a:hover {
-    background-color: var(--secondary-color);
-    color: var(--accent-color)
-} */
-
 .logo>img {
     border-radius: 50%;
     width: 4.5rem;
@@ -96,7 +82,7 @@ header {
     align-items: center;
     gap: 5rem;
     background-color: var(--secondary-color);
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 
 .hero-text {
@@ -115,9 +101,11 @@ header {
 
 #about-hero img {
     border-radius: 50%;
-    width: 30rem;
+    max-width: 25rem;
     border: 5px inset;
 }
+
+/* about w/ slider */
 
 #about-content {
     margin-left: 0.5rem;
@@ -127,7 +115,7 @@ header {
     overflow-x: hidden;
     scroll-behavior: smooth; 
     scroll-snap-type: x mandatory;
-    min-height: 40rem;
+    min-height: 45rem;
     border-radius: 25px;
  
 }
@@ -138,6 +126,8 @@ header {
     align-content: center;
     padding: 3rem;
     background-color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* Projects Section */
@@ -149,6 +139,12 @@ header {
     flex-direction: column;
 }
 
+.projects-wrapper {
+    background-color: transparent;
+    max-width: 90%;
+    text-align: center;
+}
+
 .projects-container {
     display: flex;
     max-width: 100%;
@@ -157,7 +153,7 @@ header {
     padding: 2rem;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none;
+    scrollbar-width: auto;
 }
 
 .project-info {
@@ -170,90 +166,32 @@ header {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    scroll-snap-align: center;
 }
 
-/* breakpoints
--#about-hero img size
--slider-nav a size
--slider position
--slider size
--navbar a, img
+/* scroll bar customization */
+
+html ::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+  
+  /* Track */
+html ::-webkit-scrollbar-track {
+    background: var(--secondary-color); 
+}
+   
+  /* Handle */
+html ::-webkit-scrollbar-thumb {
+    background: var(--accent-color); 
+}
+
+/* Handle on hover */
+html ::-webkit-scrollbar-thumb:hover {
+    box-shadow: 1px 1px 10px var(--accent-color);
+}
+
+/* media query to adjust the ff on smaller screens:
+    -hero section
+    
 */
-
-/* @media only screen and (max-width: 880px) {
-    .slider {
-        min-height: 37rem;
-    }
-    .slider-nav a {
-        height: 30px;
-        width: 150px;
-    }
-
-}
-
-@media only screen and (max-width: 638px) {
-    #about-hero img {
-        width: 20rem;
-        border: 3px inset;
-    }
-    #about-hero {
-        gap: 0px;
-    }
-    .slider-nav a {
-        width: 130px;
-        font-size: 0.8rem;
-    }
-    .slider {
-        min-height: 34rem;
-    }
-}
-
-@media only screen and (max-width: 551px) {
-    .slider-nav a {
-        width: 110px;
-    }
-}
-
-@media only screen and (max-width: 430px) {
-    .slider {
-        height: 47rem;
-    }
-}
-
-@media only screen and (max-width: 469px) {
-    .slider-nav a {
-        width: 90px;
-        font-size: 0.6rem;
-    }
-    .navbar nav > a {
-        font-size: 1.2rem;
-    }
-    .slider {
-        height: 47rem;
-    }
-} 
-
-@media only screen and (max-width: 407px) {
-    .slider-nav a {
-        width: 80px;
-        font-size: 0.6rem;
-    }
-
-    .navbar nav > a {
-        font-size: 1.2rem;
-    }
-} 
-
-@media only screen and (max-width: 375px) {
-    .slider {
-        height: 36rem;
-    }
-    .navbar nav > a {
-        font-size: 1rem;
-    }
-    .logo img {
-        width: 4rem;
-    }
-} */
-
-
