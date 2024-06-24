@@ -105,6 +105,25 @@ header {
     border: 5px inset;
 }
 
+.media-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.fa-brands, .fa-solid {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+}
+
+.fa-brands:hover, .fa-solid:hover {
+    transform: translateY(-5px);
+    color: var(--text-color);
+}
+
+.fa-brands:active, .fa-solid:active {
+    color: var(--accent-color);
+}
+
 /* About me slider */
 
 #about-content {

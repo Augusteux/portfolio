@@ -24,7 +24,16 @@
     <div class="hero-text">
         <h1>Lorem ipsum dolor sit amet.</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, quae.</p>
-        <p><i>media links</i></p>
+        <div class="media-links">
+        <a href="mailto:andrwrms@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="viber://chat?number=+639153449132" target="_blank"><i class="fa-brands fa-viber"></i></a>
+        <a href="https://wa.me/+639153449132" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://github.com/Augusteux" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.upwork.com/freelancers/~01a841bde1bd02edff?mp_source=share" target="_blank"><i class="fa-brands fa-upwork"></i></a>
+        <i class="fa-brands fa-linkedin"></i>
+        <a href="https://discord.com/users/427007499628183565" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://www.youtube.com/@augusteux" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
     </div>
 </section>
 
@@ -101,22 +110,25 @@
             <form action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="0a688efd-2567-43e3-a7ab-7b004ba23395">
                 <div class="visitor-details">
-                <input type="text" id="name" name="name" placeholder="Name*" required >
+                <input type="text" id="name" name="name" placeholder="Name*" autocomplete="off" required >
                 <!-- name attribute included on email input for form control (Web3Forms) -->
                 <input type="email" id="email" email="email" name="email" placeholder="Email Address*" required>
                 </div>
                 <textarea name="message" id="message" placeholder="Your Message..." cols="10" rows="25"></textarea>
                 <!-- Honeypot Spam Protection -->
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                <!-- Confirmation Success Page -->
-                <input type="hidden" name="redirect" value="submit.html">
                 <!-- Submit Button -->
-                <input type="submit" id="contact-button" value="Send Message">
+                <input type="submit" id="contact-button" value="Send"> 
             </form> 
         </div>
     </div>
 </div>
 </section>
     
+
+
+<!-- Fontawesome kit, modifying i element to appear as social media icons -->
+<script src="https://kit.fontawesome.com/beda8f4639.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
