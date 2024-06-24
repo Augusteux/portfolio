@@ -91,18 +91,26 @@
     <nav class="about-nav">
         <a href="#about-background">background</a>
         <a href="#about-skills">skills</a>
-        <a href="#contact">contact</a>
+        <a href="#contact">connect</a>
     </nav>
     <div class="slide-wrapper">
         <div class="slide" id="about-background">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut labore voluptates amet libero in cumque cum, nesciunt, veritatis autem obcaecati laborum ipsam, eveniet excepturi ipsum dolorem deleniti iste? Aliquam incidunt nostrum quod soluta similique quibusdam explicabo eveniet voluptates dolor qui impedit nemo hic magnam, laudantium quidem fugit excepturi repellendus commodi.</div>
         <div class="slide" id="about-skills">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quam voluptates rem rerum necessitatibus expedita sunt accusantium aliquam nemo doloremque commodi, dignissimos eligendi pariatur vero omnis similique explicabo quibusdam excepturi eius tempore vel cumque fuga minus? Aliquam natus fugiat aliquid consequatur vel commodi ea accusamus vitae eveniet! Veritatis nihil nisi amet nulla, quos harum dolore quaerat assumenda nostrum possimus error quis autem! Rerum sunt impedit ab at optio labore doloribus.</div>
         <div class="slide" id="contact">
-            <form>
+            <h2>contact me</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="0a688efd-2567-43e3-a7ab-7b004ba23395">
                 <div class="visitor-details">
                 <input type="text" id="name" name="name" placeholder="Name*" required >
-                <input type="email" id="email" email="email" placeholder="Email Address*" required>
+                <!-- name attribute included on email input for form control (Web3Forms) -->
+                <input type="email" id="email" email="email" name="email" placeholder="Email Address*" required>
                 </div>
                 <textarea name="message" id="message" placeholder="Your Message..." cols="10" rows="25"></textarea>
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <!-- Confirmation Success Page -->
+                <input type="hidden" name="redirect" value="submit.html">
+                <!-- Submit Button -->
                 <input type="submit" id="contact-button" value="Send Message">
             </form> 
         </div>
