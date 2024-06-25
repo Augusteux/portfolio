@@ -381,7 +381,7 @@ html ::-webkit-scrollbar-thumb {
 
 */
 
-@media (max-width: 701px) {
+@media (max-width: 720px) {
 
     #about-hero {
         gap: 2rem;
