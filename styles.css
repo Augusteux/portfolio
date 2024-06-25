@@ -401,8 +401,17 @@ html ::-webkit-scrollbar-thumb {
         font-size: 100%;
     }
 
+    #contact {
+        padding: 0;
+    }
+
     .visitor-details {
         flex-wrap: wrap;
     }
+
+    .visitor-details #name, #email, #message {
+        max-width: 100%;
+    }
+
 }
 
