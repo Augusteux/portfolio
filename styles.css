@@ -385,7 +385,6 @@ html ::-webkit-scrollbar-thumb {
 
     #about-hero {
         gap: 2rem;
-        padding-top: 0;
     }
 
     #about-hero > img {
