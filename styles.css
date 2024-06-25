@@ -231,7 +231,6 @@ header {
     border: none;
     resize: none;
     border-radius: 10px;
-    width: 100%;
     text-transform: none;
 }
 
@@ -239,7 +238,6 @@ header {
     display: flex;
     justify-content: center;
     gap: 0.2rem;
-    flex-wrap: wrap;
 }
 
 .visitor-details input {
@@ -272,7 +270,7 @@ header {
 #contact-button#contact-button {
     max-width: 10rem;
     min-height: 1.7rem;
-    flex: 1 0 100%;
+    flex: 1 1 100%;
 
     padding: 0;
     font-weight: bold;
@@ -383,10 +381,28 @@ html ::-webkit-scrollbar-thumb {
 
 */
 
-@media (max-width: 375px) {
+@media (max-width: 701px) {
+
+    #about-hero {
+        gap: 2rem;
+        padding-top: 0;
+    }
+
     #about-hero > img {
-        max-width: 20rem;    
+        max-width: 21rem;    
         margin-top: 5rem;
+    }
+
+    .navbar nav>a {
+        font-size: 1.1rem;
+    }
+
+    .hero-text h1, p {
+        font-size: 100%;
+    }
+
+    .visitor-details {
+        flex-wrap: wrap;
     }
 }
 
