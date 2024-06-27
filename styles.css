@@ -104,6 +104,7 @@ header {
     border-radius: 50%;
     max-width: 25rem;
     border: 5px inset;
+    margin: 0.8rem 0;
 }
 
 .media-links {
@@ -152,7 +153,6 @@ header {
 
 .about-nav a {
     max-height: 2.5rem;
-    /* max-width: 10rem; */
     text-align: center;
     align-content: center;
     
@@ -161,8 +161,6 @@ header {
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
 
-    /* flex-shrink: 1;
-    flex-basis: 100%; */
     flex: 1 1 100%;
     padding: 0.5rem;
     border: 1px outset var(--primary-color);
@@ -374,14 +372,6 @@ html ::-webkit-scrollbar-thumb {
     background: var(--accent-color); 
 }
 
-/* media query to adjust the ff on smaller screens:
-    -#about-hero img
-    -.hero-text
-    -.navbar nav > a
-    -.about-nav a
-
-*/
-
 @media (max-width: 720px) {
 
     #about-hero {
@@ -407,6 +397,7 @@ html ::-webkit-scrollbar-thumb {
 
     #contact {
         padding: 0;
+        max-width: 100%;
     }
 
     .visitor-details {
@@ -432,5 +423,11 @@ html ::-webkit-scrollbar-thumb {
         max-width: 19rem;    
         margin-top: 0;
         padding: 0;
+    }
+}
+
+@media (min-height: 1024px) {
+    section {
+        min-height: 0;
     }
 }
